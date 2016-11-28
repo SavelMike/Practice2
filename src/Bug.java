@@ -4,19 +4,23 @@
 public class Bug {
 
     private int Position;
-    private boolean direction;
+    private boolean movingLeft;
 
     public Bug(int initialPosition) {
         Position = initialPosition;
-        direction = false;
+        movingLeft = true;
     }
 
     public void turn() {
-        direction = true;
+        if (movingLeft == false) {
+            movingLeft = true;
+        } else {
+            movingLeft = false;
+        }
     }
 
     public void move() {
-        if (direction = false) {
+        if (movingLeft == false) {
             Position++;
         }else {
             Position--;
