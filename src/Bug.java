@@ -8,22 +8,22 @@ public class Bug {
 
     public Bug(int initialPosition) {
         Position = initialPosition;
-        movingLeft = true;
+        movingLeft = false;
     }
 
     public void turn() {
-        if (movingLeft == false) {
-            movingLeft = true;
-        } else {
+        if (movingLeft) {
             movingLeft = false;
+        } else {
+            movingLeft = true;
         }
     }
 
     public void move() {
-        if (movingLeft == false) {
-            Position++;
-        }else {
+        if (movingLeft) {
             Position--;
+        }else {
+            Position++;
         }
     }
 
