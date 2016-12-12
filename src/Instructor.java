@@ -3,12 +3,11 @@
  */
 public class Instructor extends Person {
 
-    private String name;
-    private int dateOfBirth;
     private double salary;
 
-    public Instructor(String n, int bdate, double s) {
-
+    public Instructor(String n, int date, double s) {
+        super(n, date);
+        salary = s;
     }
 
     public String toString() {

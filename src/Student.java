@@ -3,12 +3,11 @@
  */
 public class Student extends Person {
 
-    private String name;
-    private int dateOfBirth;
     private String major;
 
-    public Student(String n, int bdate, String m) {
-
+    public Student(String n, int date, String m) {
+        super(n, date);
+        major = m;
     }
 
     public String toString() {
